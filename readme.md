@@ -1,7 +1,7 @@
-#Ping Plugin
+#PWhiteboard Plugin
 This Plugin is designed to create a context event with a given String and return it as a ping.
 
-Plugin ID: org.ambientdynamix.contextplugins.pingplugin
+Plugin ID: org.ambientdynamix.contextplugins.whiteboard
 
 ###Supported Context Type
 <table>
@@ -9,28 +9,12 @@ Plugin ID: org.ambientdynamix.contextplugins.pingplugin
         <td>Context Types</td><td>Privacy Risk Level</td><td>Data Types</td><td>Description</td>
     </tr>
     <tr>
-        <td>org.ambientdynamix.contextplugins.context.info.sample.ping</td><td>LOW</td><td>PingContextInfo</td><td>Returned Ping</td>
+        <td>org.ambientdynamix.contextplugins.context.info.data.whiteboard</td><td>LOW</td><td>WhiteboardContextInfo</td><td>Publically stored data</td>
     </tr>
 </table>
 
 ###Use
-It only answers configured context requests with the parameters action_type = ping and id with a string to returned.
 
-###Native App Usage
-Add context support as follows:
-
-```Java
-dynamix.addContextSupport(dynamixCallback, "org.ambientdynamix.contextplugins.context.info.sample.ping");
-```
-    
-Request Context by creating a Bundle
-
-```Java
-Bundle scanConfig = new Bundle();
-scanconfig.putString("action_type", "ping");
-scanconfig.putString("id", "someString");
-dynamix.configuredContextRequest(dynamixCallback, "org.ambientdynamix.contextplugins.pingplugin", "org.ambientdynamix.contextplugins.context.info.sample.ping", scanConfig);
-```    
 ### Plug-in Data-type JAR
 
 [Download](https://github.com/TVLuke/DynamixPingPlugin/raw/master/dist/org.ambientdynamix.contextplugins.pingplugin_datatypes_1.0.0.jar "Ping jar")
