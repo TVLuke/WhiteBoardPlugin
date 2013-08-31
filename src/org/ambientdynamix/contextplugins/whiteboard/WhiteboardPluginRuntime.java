@@ -104,10 +104,12 @@ public class WhiteboardPluginRuntime extends AutoReactiveContextPluginRuntime
 			Log.d(TAG, "->"+key+", "+value);
 			if(value!=null)
 			{
+				Log.d(TAG, "v!=null");
 				settings.put(key, value);
 			}
 			else
 			{
+				Log.d(TAG, "v==null");
 				settings.put(key, "");
 			}
 		}

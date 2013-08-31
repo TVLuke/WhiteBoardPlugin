@@ -40,7 +40,7 @@ import android.util.Log;
 public class WhiteboardContextInfo implements IContextInfo
 {
 
-	private final String TAG = "PINGPLUGIN";
+	private final String TAG = "WHITEBOARD";
 	private List<KeyValuePair> values = new ArrayList<KeyValuePair>();
 
 	public static Parcelable.Creator<WhiteboardContextInfo> CREATOR = new Parcelable.Creator<WhiteboardContextInfo>() 
@@ -62,7 +62,9 @@ public class WhiteboardContextInfo implements IContextInfo
 		ContextPluginSettings settings = WhiteboardPluginRuntime.settings;
 		if(settings.containsKey(x))
 		{
+			Log.d(TAG, "create Context Info");
 			KeyValuePair kvp = new KeyValuePair(x, settings.get(x));
+			Log.d(TAG, "kvp="+kvp.key+", "+kvp.value);
 			values.add(kvp);
 		}
 		//get Settings
