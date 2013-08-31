@@ -106,6 +106,7 @@ public class WhiteboardPluginRuntime extends AutoReactiveContextPluginRuntime
 			{
 				Log.d(TAG, "v!=null");
 				settings.put(key, value);
+				Log.d(TAG, settings.get(key));
 			}
 			else
 			{

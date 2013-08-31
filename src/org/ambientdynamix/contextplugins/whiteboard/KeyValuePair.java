@@ -22,7 +22,7 @@ public class KeyValuePair  implements Parcelable
 			}
 		};
 		
-	KeyValuePair(String key, String Value)
+	KeyValuePair(String key, String value)
 	{
 		this.key=key;
 		this.value=value;
@@ -32,11 +32,6 @@ public class KeyValuePair  implements Parcelable
 	{
 		key = in.readString();
 		value = in.readString();
-	}
-	
-	public String get(String key)
-	{
-		return value;
 	}
 
 	@Override
