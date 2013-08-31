@@ -94,13 +94,20 @@ public class WhiteboardPluginRuntime extends AutoReactiveContextPluginRuntime
 	{
 		Date d = new Date();
 		long x1 = d.getTime();
-		//Log.d(TAG, "received Request: "+x1);
+		Log.d(TAG, "received Request: "+x1);
 		String at = scanConfig.getString("action_type");
 		if(at.equals("store"))
 		{
 			String key = scanConfig.getString("key");
 			String value = scanConfig.getString("value");
-			//TDOD: Store as key value pair in the settings
+			if(value!=null)
+			{
+				settings.put(key, value);
+			}
+			else
+			{
+				settings.put(key, "");
+			}
 		}
 		if(at.equals("retreive"))
 		{
@@ -116,7 +123,7 @@ public class WhiteboardPluginRuntime extends AutoReactiveContextPluginRuntime
 				SecuredContextInfo aci= new SecuredContextInfo(new WhiteboardContextInfo(), PrivacyRiskLevel.LOW);
 				sendContextEvent(requestId, aci);
 			}
-			//Log.d(TAG, "Send Context: "+d.getTime());
+			Log.d(TAG, "Send Context: "+d.getTime());
 		}
 		context=this;
 	}
