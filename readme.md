@@ -1,5 +1,10 @@
-#PWhiteboard Plugin
-This Plugin is designed to create a context event with a given String and return it as a ping.
+#Whiteboard Plugin
+The Whiteboard plugin allows to use a dynamix instance as a temporary storage facility that can be used by all applications or other connected remote systems.
+
+The whiteboard can store simple String key-value pairs and deliver the list of currently stored values to all aplications.
+
+As such it can be used as a cookie system, a storage facility, a asynchronous communication platform and much more 
+without any configuration or considerations to infrastructure.
 
 Plugin ID: org.ambientdynamix.contextplugins.whiteboard
 
@@ -11,13 +16,16 @@ Plugin ID: org.ambientdynamix.contextplugins.whiteboard
     <tr>
         <td>org.ambientdynamix.contextplugins.context.info.data.whiteboard</td><td>LOW</td><td>WhiteboardContextInfo</td><td>Publically stored data</td>
     </tr>
+    <tr>
+        <td>org.ambientdynamix.contextplugins.context.action.data.whiteboard</td><td>LOW</td><td>WhiteboardContextInfo</td><td>Publically stored data</td>
+    </tr>
 </table>
 
 ###Use
 
 ### Plug-in Data-type JAR
 
-[Download](https://github.com/TVLuke/DynamixPingPlugin/raw/master/dist/org.ambientdynamix.contextplugins.pingplugin_datatypes_1.0.0.jar "Ping jar")
+[Download](https://github.com/TVLuke/WhiteBoardPlugin/raw/master/dist/org.ambientdynamix.contextplugins.whiteboard_datatypes_1.0.0.jar "Whiteboard jar")
 
 ### Copyright
 
