@@ -98,8 +98,10 @@ public class WhiteboardPluginRuntime extends AutoReactiveContextPluginRuntime
 		String at = scanConfig.getString("action_type");
 		if(at.equals("store"))
 		{
+			Log.d(TAG, "store");
 			String key = scanConfig.getString("key");
 			String value = scanConfig.getString("value");
+			Log.d(TAG, "->"+key+", "+value);
 			if(value!=null)
 			{
 				settings.put(key, value);
@@ -111,6 +113,7 @@ public class WhiteboardPluginRuntime extends AutoReactiveContextPluginRuntime
 		}
 		if(at.equals("retreive"))
 		{
+			Log.d(TAG, "retreive");
 			if(scanConfig.containsKey("key")) //there is a key or a set of keys
 			{
 				String key = scanConfig.getString("key");
@@ -123,7 +126,7 @@ public class WhiteboardPluginRuntime extends AutoReactiveContextPluginRuntime
 				SecuredContextInfo aci= new SecuredContextInfo(new WhiteboardContextInfo(), PrivacyRiskLevel.LOW);
 				sendContextEvent(requestId, aci);
 			}
-			Log.d(TAG, "Send Context: "+d.getTime());
+			Log.d(TAG, "Send Context");
 		}
 		context=this;
 	}
